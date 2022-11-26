@@ -14,12 +14,6 @@ from htbuilder.funcs import rgba, rgb
 import math
 
 
-#log.info("Test LOG INFO")
-#log.debug("Test LOG DEBUG")
-#log.warning("Test LOG WARNING")
-#log.error("Test LOG ERROR")
-
-
 sensors = [
     ['IMX291', 5.63, 3.17],
     ['IMX477', 7.564, 5.476],
@@ -64,8 +58,6 @@ col5.metric("Image circle [mm]", img_circle, delta=None, delta_color="normal", h
 
 
 
-
-
 focal_length = col2.number_input('Focal length', min_value=1.0, max_value=500.0, value=8.0, step=0.1, format="%2.1f")
 #focal_length = col2.slider('Focal length', min_value=1.0, max_value=500.0, value=8.0, step=0.1, format="%2.1f", help="Lens focal length")
 #st.write('You selected:', focal_length)
@@ -80,20 +72,6 @@ col6.metric("HFOV [°]", angle_h, delta=None, delta_color="normal", help=None)
 col7.metric("VFOV [°]", angle_v, delta=None, delta_color="normal", help=None)
 col8.metric("DIAG [°]", angle_d, delta=None, delta_color="normal", help=None)
 
-
-#335c67
-
-'''
-colors = ['rgba(0x33, 0x5c, 0x67, 0.8)',
-          'rgba(111, 231, 219, 0.8)',
-          'rgba(184, 87, 82, 0.8)']
-'''
-
-'''
-colors = ['hsla(1, 100%, 50%, 0.5)',
-          'hsla(80, 100%, 50%, 0.5)',
-          'hsla(270, 100%, 50%, 0.5)']
-'''
 
 colors = ['#01161e',
           '#124559',
@@ -125,16 +103,6 @@ fig_d = go.Barpolar(
 )
 
 data = [fig_d]
-
-'''
-fig.update_layout(
-    template=None,
-    polar = dict(
-        radialaxis = dict(range=[0, 5], showticklabels=False, ticks='', griddash='dot'),
-        angularaxis = dict(showticklabels=True, ticks='', direction="clockwise", rotation=90),
-    )
-)
-'''
 
 layout = go.Layout(
     #template=None,
