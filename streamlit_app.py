@@ -47,3 +47,34 @@ focal_length = col2.number_input('Focal length', min_value=1.0, max_value=500.0,
 
 #st.write('You selected:', focal_length)
 
+
+
+#layout = go.Layout(
+#    showlegend = False,
+#)
+
+fig = go.Figure(go.Barpolar(
+    r=[4.5],
+    theta=[0],
+    width=[focal_length*5],
+    marker_color=["#E4FF87"],
+    marker_line_color="black",
+    marker_line_width=0.5,
+    opacity=0.8,
+))
+
+fig.update_layout(
+    template=None,
+    polar = dict(
+        radialaxis = dict(range=[0, 5], showticklabels=False, ticks='', griddash='dash'),
+        angularaxis = dict(showticklabels=True, ticks='', direction="clockwise", rotation=90),
+    )
+)
+
+# todo: show +/- angle
+
+#config = {'staticPlot': True, 'displaylogo': False, 'displayModeBar': False}
+config = {'staticPlot': True, 'displaylogo': False, 'displayModeBar': False}
+st.plotly_chart(fig, use_container_width=True, config=config)
+
+
