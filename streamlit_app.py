@@ -238,35 +238,3 @@ def footer():
 
 
 #footer()
-
-
-
-
-
-
-
-
-'''
-    //alert(document.calculatex.first.value);
-            var s_width = document.calculate_angles.s_width.value;
-            var s_height = document.calculate_angles.s_height.value;
-            var s_diag = document.calculate_angles.s_diag.value;
-            var lens_mm = document.calculate_angles.lens_mm.value;
-
-            // calculate sensor diag length
-            var d = Math.sqrt((s_width * s_width) + (s_height * s_height));
-            d = Number((d).toFixed(1));
-            document.calculate_angles.s_diag.value = d;
-
-            // calculate view angles
-            var angle_h = (Math.atan(s_width / (2 * lens_mm)) * 360) / Math.PI;
-            document.calculate_angles.fov_h.value = Number((angle_h).toFixed(1));
-
-            var angle_v = (Math.atan(s_height / (2 * lens_mm)) * 360) / Math.PI;
-            document.calculate_angles.fov_v.value = Number((angle_v).toFixed(1));
-
-            var angle_d = (Math.atan(d / (2 * lens_mm)) * 360) / Math.PI;
-            document.calculate_angles.fov_d.value = Number((angle_d).toFixed(1));
-            
-            draw(angle_d);
-'''
