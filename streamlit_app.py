@@ -1,6 +1,3 @@
-# streamlit run lens.py
-# http://localhost:8501/?embed=true
-
 
 import streamlit as st
 import time
@@ -79,9 +76,9 @@ angle_h = round((math.atan(s_width / (2 * focal_length)) * 360) / math.pi, 1)
 angle_v = round((math.atan(s_height / (2 * focal_length)) * 360) / math.pi, 1)
 angle_d = round((math.atan(img_circle / (2 * focal_length)) * 360) / math.pi, 1)
 
-col6.metric("HFOV [Â°]", angle_h, delta=None, delta_color="normal", help=None)
-col7.metric("VFOV [Â°]", angle_v, delta=None, delta_color="normal", help=None)
-col8.metric("DIAG [Â°]", angle_d, delta=None, delta_color="normal", help=None)
+col6.metric("HFOV [°]", angle_h, delta=None, delta_color="normal", help=None)
+col7.metric("VFOV [°]", angle_v, delta=None, delta_color="normal", help=None)
+col8.metric("DIAG [°]", angle_d, delta=None, delta_color="normal", help=None)
 
 
 #335c67
@@ -180,8 +177,8 @@ st.plotly_chart(fig, use_container_width=True, config=config)
 
 
 
-st.info('Calculations are theoretical. Angles for short focal lenses will be larger due to the gometric distortions and fishye effect.')
-st.info('In some modes view angle can be smaller due to image cropping.')
+st.info('Calculations are theoretical. Angles for short focal lenses will be larger due to the gometric distortions and fishye effect.', icon="ℹ️")
+st.info('In some modes view angle can be smaller due to image cropping.', icon="ℹ️")
 
 
 
