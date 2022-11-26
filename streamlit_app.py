@@ -42,7 +42,7 @@ sensor = col1.selectbox(label = 'Select sensor size',
 #st.write('You selected:', sensor)
 
 
-focal_length = col2.number_input('Focal length', min_value=1.0, max_value=500.0, value=8.0, step=0.1, format="%2.1f", help="Lens focal length")
+focal_length = col2.number_input('Focal length 2', min_value=1.0, max_value=500.0, value=8.0, step=0.1, format="%2.1f", help="Lens focal length")
 #focal_length = col2.slider('Focal length', min_value=1.0, max_value=500.0, value=8.0, step=0.1, format="%2.1f", help="Lens focal length")
 
 #st.write('You selected:', focal_length)
