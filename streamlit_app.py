@@ -180,8 +180,8 @@ st.plotly_chart(fig, use_container_width=True, config=config)
 
 
 
-st.info('Calculations are theoretical. Angles for short focal lenses will be larger due to the gometric distortions and fishye effect.', icon="â„¹ï¸")
-st.info('In some modes view angle can be smaller due to image cropping.', icon="â„¹ï¸")
+st.info('Calculations are theoretical. Angles for short focal lenses will be larger due to the gometric distortions and fishye effect.')
+st.info('In some modes view angle can be smaller due to image cropping.')
 
 
 
